@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot name="gofa_with_carrier">
+  <!-- Virtual joint connecting the world to the robot base -->
+  <virtual_joint name="base_joint" type="fixed" parent_frame="world" child_link="base_link"/>
+
+  <!-- Arm planning group -->
+  <group name="arm">
+    <chain base_link="base_link" tip_link="link_6"/>
+  </group>
+
+  <!-- End-effector (tool) -->
+  <group name="arm_with_ee">
+    <chain base_link="base_link" tip_link="link_6"/>
+    <end_effector name="ee_link" parent_link="link_6"/>
+  </group>
+
+  <!-- Optional: disable self-collisions for adjacent links -->
+  <disable_collisions link1="link_1" link2="link_2" reason="adjacent"/>
+</robot>

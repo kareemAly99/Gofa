@@ -1,0 +1,10 @@
+Panels:
+  - Class: rviz_default_plugins/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Name: RobotModel
+      Class: rviz_default_plugins/RobotModel
+      Robot Description: robot_description
+      Enabled: true

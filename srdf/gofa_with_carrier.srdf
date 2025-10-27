@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name="gofa_with_carrier">
+
+  <!-- Planning group for the arm -->
+  <group name="gofa_arm">
+    <chain base_link="base_link" tip_link="link_6"/>
+  </group>
+
+  <!-- End-effector group -->
+  <group name="end_effector">
+    <link name="link_6"/>
+    <link name="carrier"/>
+  </group>
+
+  <!-- Virtual joint to world -->
+  <virtual_joint name="base_joint" type="fixed" parent_frame="world" child_link="base_link"/>
+
+  <!-- End effector for planning -->
+  <end_effector name="carrier_effector" parent_link="link_6" group="end_effector"/>
+
+</robot>

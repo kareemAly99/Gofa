@@ -1,0 +1,20 @@
+planner_configs:
+  RRTConnect:
+    type: geometric::RRTConnect
+    range: 0.0
+  RRT:
+    type: geometric::RRT
+    range: 0.0
+  PRM:
+    type: geometric::PRM
+    range: 0.0
+
+arm:
+  planner_configs: [RRTConnect, RRT, PRM]
+  start_state_max_bounds_error: 0.1
+  goal_joint_tolerance: 0.01
+  goal_position_tolerance: 0.01
+  goal_orientation_tolerance: 0.01
+  longest_valid_segment_fraction: 0.01
+  max_solution_time: 5.0
+
