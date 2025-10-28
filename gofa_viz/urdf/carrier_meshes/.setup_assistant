@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: gofa_viz
+    relative_path: urdf/gofa_with_carrier.urdf
+  srdf:
+    relative_path: config/gofa_with_carrier.srdf
+  package_settings:
+    author_name: ""
+    author_email: ""
+    generated_timestamp: 1758956330

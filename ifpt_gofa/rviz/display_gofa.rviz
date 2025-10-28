@@ -1,0 +1,11 @@
+Panels:
+  - Class: rviz/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Name: RobotModel
+      Class: rviz/RobotModel
+      Robot Description: /robot_description
+      Enabled: true
+

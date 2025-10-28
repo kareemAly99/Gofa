@@ -1,0 +1,337 @@
+<?xml version="1.0" ?>
+<robot name="gofa_crb15000_10kg_152">
+
+  <!-- Materials -->
+  <material name="abb_orange">
+    <color rgba="1.0 0.43 0.0 1.0"/>
+  </material>
+  
+  <material name="abb_dark_gray">
+    <color rgba="0.3 0.3 0.3 1.0"/>
+  </material>
+
+  <material name="gripper_and_cathode">
+    <color rgba="0.5 0.5 0.5 1.0"/>
+  </material>
+
+  <!-- Base Link (LINK00) -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK00_CAD.stl"/>
+      </geometry>
+      <material name="abb_dark_gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK00_CAD.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="15.0"/>
+      <origin xyz="0 0 0.1" rpy="0 0 0"/>
+      <inertia ixx="0.5" ixy="0" ixz="0" iyy="0.5" iyz="0" izz="0.5"/>
+    </inertial>
+  </link>
+
+  <!-- Link 1 -->
+  <link name="link_1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK01_CAD.stl"/>
+      </geometry>
+      <material name="abb_orange"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK01_CAD.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10.0"/>
+      <origin xyz="0 0 0.1" rpy="0 0 0"/>
+      <inertia ixx="0.4" ixy="0" ixz="0" iyy="0.4" iyz="0" izz="0.3"/>
+    </inertial>
+  </link>
+
+  <!-- Link 2 -->
+  <link name="link_2">
+    <visual>
+      <origin xyz="-0.15 0 -0.4" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK02_CAD.stl"/>
+      </geometry>
+      <material name="abb_orange"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.15 0 -0.4" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK02_CAD.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="9.0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.0" ixy="0" ixz="0" iyy="1.0" iyz="0" izz="0.2"/>
+    </inertial>
+  </link>
+
+  <!-- Link 3 -->
+  <link name="link_3">
+    <visual>
+      <origin xyz="-0.15 -0.085 -1.107" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK03_CAD.stl"/>
+      </geometry>
+      <material name="abb_orange"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.15 -0.085 -1.107" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK03_CAD.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="8.0"/>
+      <origin xyz="0 0 0.3" rpy="0 0 0"/>
+      <inertia ixx="0.8" ixy="0" ixz="0" iyy="0.8" iyz="0" izz="0.2"/>
+    </inertial>
+  </link>
+
+  <!-- Link 4 -->
+  <link name="link_4">
+    <visual>
+      <origin xyz="-0.247 0 -1.217" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK04_CAD.stl"/>
+      </geometry>
+      <material name="abb_orange"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.247 0 -1.217" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK04_CAD.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="4.0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
+  </link>
+
+  <!-- Link 5 -->
+  <link name="link_5">
+    <visual>
+      <origin xyz="-0.792 -0.0745 -1.217" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK05_CAD.stl"/>
+      </geometry>
+      <material name="abb_orange"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.792 -0.0745 -1.217" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK05_CAD.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="3.0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.05" ixy="0" ixz="0" iyy="0.05" iyz="0" izz="0.05"/>
+    </inertial>
+  </link>
+
+  <!-- Link 6 -->
+  <link name="link_6">
+    <visual>
+      <origin xyz="-0.8604 0 -1.297" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK06_CAD.stl"/>
+      </geometry>
+      <material name="abb_orange"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.8604 0 -1.297" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK06_CAD.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="2.0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- Tool0 Link - Standard Tool Frame -->
+  <!-- <link name="gripper_with_EE">
+    <collision>
+	  <origin xyz="0.135 0 -0.075" rpy="0 0 1.5708"/>
+      <geometry>
+        <mesh filename="package://obstacles/New/robot_gripper_with_wpc_v1.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual>
+	  <origin xyz="0.135 0 -0.075" rpy="0 0 1.5708"/>
+      <geometry>
+        <mesh filename="obstacles/New/robot_gripper_with_wpc_v1.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="gripper_and_cathode"/>
+    </visual>
+  </link> -->
+
+  <!-- Joint 1 (Axis 1 Rotation) -->
+  <joint name="joint_1" type="revolute">
+    <parent link="base_link"/>
+    <child link="link_1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-4.71239" upper="4.71239" effort="100" velocity="2.0944"/>  <!-- -270° to 270°, 120°/s -->
+    <dynamics damping="50" friction="1"/>
+  </joint>
+
+  <!-- Joint 2 (Axis 2 Arm) -->
+  <joint name="joint_2" type="revolute">
+    <parent link="link_1"/>
+    <child link="link_2"/>
+    <origin xyz="0.15 0 0.4" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14159" upper="3.14159" effort="100" velocity="2.0944"/>  <!-- -180° to 180°, 120°/s -->
+    <dynamics damping="50" friction="1"/>
+  </joint>
+
+  <!-- Joint 3 (Axis 3 Arm) -->
+  <joint name="joint_3" type="revolute">
+    <parent link="link_2"/>
+    <child link="link_3"/>
+    <origin xyz="0 0.085 0.707" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.92699" upper="1.48353" effort="100" velocity="2.1817"/>  <!-- -225° to 85°, 125°/s -->
+    <dynamics damping="40" friction="1"/>
+  </joint>
+
+  <!-- Joint 4 (Axis 4 Wrist) -->
+  <joint name="joint_4" type="revolute">
+    <parent link="link_3"/>
+    <child link="link_4"/>
+    <origin xyz="0.093 -0.085 0.11" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-3.14159" upper="3.14159" effort="30" velocity="3.49066"/>  <!-- -180° to 180°, 200°/s -->
+    <dynamics damping="30" friction="0.5"/>
+  </joint>
+
+  <!-- Joint 5 (Axis 5 Bend) -->
+  <joint name="joint_5" type="revolute">
+    <parent link="link_4"/>
+    <child link="link_5"/>
+    <origin xyz="0.549 0.0745 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-3.14159" upper="3.14159" effort="30" velocity="3.49066"/>  <!-- -180° to 180°, 200°/s -->
+    <dynamics damping="20" friction="0.5"/>
+  </joint>
+
+  <!-- Joint 6 (Axis 6 Turn) -->
+  <joint name="joint_6" type="revolute">
+    <parent link="link_5"/>
+    <child link="link_6"/>
+    <origin xyz="0.0684 -0.0745 0.08" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-4.71239" upper="4.71239" effort="20" velocity="3.49066"/>  <!-- -270° to 270°, 200°/s -->
+    <dynamics damping="10" friction="0.3"/>
+  </joint>
+
+  <!-- Tool0 Joint (Fixed) (Standard ISO 9409-1-50 tool flange)-->
+  <!-- <joint name="joint_ee" type="fixed">
+    <parent link="link_6"/>
+    <child link="gripper_with_EE"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/> 
+  </joint> -->
+
+  <!-- TCP Dummy Link (Line 5th below: Offset of 5cm along z-axis, adjust as needed)-->
+  <!-- <link name="tcp_offset"/>
+  <joint name="joint_tcp" type="fixed">
+    <parent link="gripper_with_EE"/>
+    <child link="tcp_offset"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint> -->
+
+  <!-- Gazebo-specific elements -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/gofa_crb15000_10kg_152</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+
+  <!-- Transmission elements for control -->
+  <transmission name="trans_joint_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_joint_1">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+  <transmission name="trans_joint_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_joint_2">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+  <transmission name="trans_joint_3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_3">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_joint_3">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+  <transmission name="trans_joint_4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_4">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_joint_4">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+  <transmission name="trans_joint_5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_5">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_joint_5">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+
+  <transmission name="trans_joint_6">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_6">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor_joint_6">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+</robot>

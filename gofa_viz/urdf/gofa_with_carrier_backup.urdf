@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<robot name="gofa_with_carrier">
+
+  <!-- ===============================
+       Full CRB Robot (CRB15000_10_152_v3)
+       Paste the full contents here
+       =============================== -->
+
+  <!-- Materials -->
+  <material name="abb_orange">
+    <color rgba="1.0 0.43 0.0 1.0"/>
+  </material>
+  <material name="abb_dark_gray">
+    <color rgba="0.3 0.3 0.3 1.0"/>
+  </material>
+  <material name="gripper_and_cathode">
+    <color rgba="0.5 0.5 0.5 1.0"/>
+  </material>
+
+  <!-- Base Link -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK00_CAD.stl"/>
+      </geometry>
+      <material name="abb_dark_gray"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ifpt_gofa/urdf/gofa_description/meshes/CRB15000_10kg-152_Omnicore_rev00_LINK00_CAD.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="15.0"/>
+      <origin xyz="0 0 0.1" rpy="0 0 0"/>
+      <inertia ixx="0.5" ixy="0" ixz="0" iyy="0.5" iyz="0" izz="0.5"/>
+    </inertial>
+  </link>
+
+  <!-- Link 1 to Link 6 -->
+  <!-- Paste all link_1 to link_6 definitions and their joints from CRB15000_10_152_v3.urdf here exactly -->
+
+  <!-- ===============================
+       Carrier attached to end-effector
+       =============================== -->
+  <link name="carrier">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/resource/carrier_meshes/carrier_full.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://gofa_viz/resource/carrier_meshes/carrier_full.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Fixed joint connecting carrier to robot hand (link_6) -->
+  <joint name="hand_to_carrier" type="fixed">
+    <parent link="link_6"/>
+    <child link="carrier"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+</robot>

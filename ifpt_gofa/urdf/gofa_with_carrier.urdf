@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<robot name="CRB15000_10_152_with_carrier">
+
+  <!-- ================= World to Robot Root ================= -->
+  <link name="world"/>
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/gofa_viz/carrier_meshes/base_link.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ================= Robot Links and Joints ================= -->
+  <link name="link_1">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/gofa_viz/carrier_meshes/link_1.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_0_1" type="revolute">
+    <parent link="base_link"/>
+    <child link="link_1"/>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="100" velocity="1.0"/>
+  </joint>
+
+  <link name="link_2">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/gofa_viz/carrier_meshes/link_2.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_1_2" type="revolute">
+    <parent link="link_1"/>
+    <child link="link_2"/>
+    <origin xyz="0 0 0.3" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="100" velocity="1.0"/>
+  </joint>
+
+  <link name="link_3">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/gofa_viz/carrier_meshes/link_3.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_2_3" type="revolute">
+    <parent link="link_2"/>
+    <child link="link_3"/>
+    <origin xyz="0 0 0.3" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="100" velocity="1.0"/>
+  </joint>
+
+  <link name="link_4">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/gofa_viz/carrier_meshes/link_4.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_3_4" type="revolute">
+    <parent link="link_3"/>
+    <child link="link_4"/>
+    <origin xyz="0 0 0.3" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.57" upper="1.57" effort="100" velocity="1.0"/>
+  </joint>
+
+  <link name="link_5">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/gofa_viz/carrier_meshes/link_5.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_4_5" type="revolute">
+    <parent link="link_4"/>
+    <child link="link_5"/>
+    <origin xyz="0 0 0.25" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-1.57" upper="1.57" effort="100" velocity="1.0"/>
+  </joint>
+
+  <link name="link_6">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/gofa_viz/carrier_meshes/link_6.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_5_6" type="revolute">
+    <parent link="link_5"/>
+    <child link="link_6"/>
+    <origin xyz="0 0 0.2" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.57" upper="1.57" effort="100" velocity="1.0"/>
+  </joint>
+
+  <!-- ================= Gripper ================= -->
+  <link name="robot_gripper">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/gofa_viz/carrier_meshes/gripper.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_link6_gripper" type="fixed">
+    <parent link="link_6"/>
+    <child link="robot_gripper"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- ================= Carriers ================= -->
+  <link name="carrier_1">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/resource/carrier_meshes/carrier_1.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_gripper_carrier_1" type="fixed">
+    <parent link="robot_gripper"/>
+    <child link="carrier_1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="carrier_2">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/resource/carrier_meshes/carrier_2.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_gripper_carrier_2" type="fixed">
+    <parent link="robot_gripper"/>
+    <child link="carrier_2"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="carrier_3">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/resource/carrier_meshes/carrier_3.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_gripper_carrier_3" type="fixed">
+    <parent link="robot_gripper"/>
+    <child link="carrier_3"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="carrier_4">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/resource/carrier_meshes/carrier_4.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_gripper_carrier_4" type="fixed">
+    <parent link="robot_gripper"/>
+    <child link="carrier_4"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="carrier_5">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/resource/carrier_meshes/carrier_5.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_gripper_carrier_5" type="fixed">
+    <parent link="robot_gripper"/>
+    <child link="carrier_5"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="carrier_6">
+    <visual>
+      <geometry>
+        <mesh filename="package://gofa_viz/resource/carrier_meshes/carrier_6.STL"/>
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint_gripper_carrier_6" type="fixed">
+    <parent link="robot_gripper"/>
+    <child link="carrier_6"/>
+    <origin xyz="0 0 0" rpy="0
